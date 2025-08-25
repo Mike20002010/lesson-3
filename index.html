@@ -6,6 +6,9 @@
     <title>Document</title>
 
     <style>
+
+
+
         .table {
             width: 60%;
            margin: auto;
@@ -15,10 +18,95 @@
             border: 1px solid black;
             border-collapse: collapse;
         }
+
+        .section {
+            margin-top: 50px;
+            margin-bottom: 150px;
+        }
+
+
+
+
+
+         body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      background-color: #a9ffa1;
+      padding: 30px;
+    }
+    h2 {
+      color: #b58900;
+      text-align: center;
+    }
+    form {
+      width: 600px;
+      margin: auto;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+    }
+    .checkbox-group, .radio-group {
+      margin-bottom: 20px;
+    }
+    .checkbox-group label,
+    .radio-group label {
+      font-weight: normal;
+      display: block;
+      margin-bottom: 5px;
+    }
+    button {
+      background-color: #b58900;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #00a51b;
+    }
+           
+        
+       
+      
     </style>
 </head>
 <body>
     
+
+   
+
+  <h2>Рядкові теги</h2>
+  <ul>
+    <li>&lt;span&gt;</li>
+    <li>&lt;a&gt;</li>
+    <li>&lt;strong&gt;</li>
+    <li>&lt;em&gt;</li>
+    <li>&lt;label&gt;</li>
+    <li>&lt;small&gt;</li>
+    <li>&lt;abbr&gt;</li>
+  </ul>
+
+  <h2>Блокові теги</h2>
+  <ul>
+    <li>&lt;div&gt;</li>
+    <li>&lt;p&gt;</li>
+    <li>&lt;section&gt;</li>
+    <li>&lt;article&gt;</li>
+    <li>&lt;header&gt;</li>
+    <li>&lt;footer&gt;</li>
+    <li>&lt;nav&gt;</li>
+  </ul>
+
+
+
+    <section class="section">
 <table class="table">
 <thead>
     <tr>
@@ -87,20 +175,77 @@
         <td>Фізкультура</td>
     </tbody>
 </table>
-
-
-<form>
-  Ім’я: <input type="text" name="firstName"><br>
-  Прізвище: <input type="text" name="lastName"><br>
-  Пошта: <input type="email" name="email"><br>
-  Телефон: <input type="text" name="phone"><br>
-  Коментар: <br>
-  <textarea name="comment"></textarea><br>
-  <input type="submit" value="Надіслати">
-</form>
+</section>
 
 
 
+
+<h2>Опитування відвідувача ресторану</h2>
+
+  <form>
+    <div class="form-group">
+      <label for="name">Ім'я</label>
+      <input type="text" id="name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Телефон (000-000-00-00)</label>
+      <input type="tel" id="phone" name="phone" pattern="\d{3}-\d{3}-\d{2}-\d{2}">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email">
+    </div>
+
+    <div class="form-group">
+      <label for="date">Дата відвідування</label>
+      <input type="date" id="date" name="date">
+    </div>
+
+
+    <div class="form-group">
+      <label for="age">Вік</label>
+      <select id="age" name="age">
+        <option value="">Оберіть</option>
+        <option>18-25</option>
+        <option>26-35</option>
+        <option>36-50</option>
+        <option>50+</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="cuisine">Улюблена кухня</label>
+      <select id="cuisine" name="cuisine">
+        <option>Українська</option>
+        <option>Італійська</option>
+        <option>Азійська</option>
+        <option>Мексиканська</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="dishes">Які ще страви ви б хотіли бачити в меню?</label>
+      <textarea id="dishes" name="dishes" rows="3"></textarea>
+    </div>
+
+    <div class="checkbox-group">
+      <label>Чому Ви обрали наш заклад?</label>
+      <label><input type="checkbox" name="reason" value="work"> Поряд з місцем роботи</label>
+      <label><input type="checkbox" name="reason" value="ad"> Побачив рекламу</label>
+      <label><input type="checkbox" name="reason" value="friends"> Порадили друзі</label>
+      <label><input type="checkbox" name="reason" value="quality"> Найкраще співвідношення ціни якості</label>
+    </div>
+
+    <div class="radio-group">
+      <label>Чи будете ви рекомендувати наш заклад своїм знайомим?</label>
+      <label><input type="radio" name="recommend" value="yes"> Так</label>
+      <label><input type="radio" name="recommend" value="no"> Ні</label>
+    </div>
+
+    <button type="submit">Відправити</button>
+  </form>
 
 
 
