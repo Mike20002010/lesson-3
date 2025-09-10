@@ -41,26 +41,33 @@
       width: 600px;
       margin: auto;
     }
+    
     .form-group {
-      margin-bottom: 20px;
-    }
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+  
+}
     label {
       display: block;
       margin-bottom: 5px;
     }
     input, select, textarea {
-      width: 100%;
+      width: 90%;
       padding: 8px;
     }
-    .checkbox-group, .radio-group {
-      margin-bottom: 20px;
-    }
-    .checkbox-group label,
-    .radio-group label {
-      font-weight: normal;
-      display: block;
-      margin-bottom: 5px;
-    }
+
+.checkbox-group {
+    border: 1px solid black;
+  border-radius: 4px;
+  padding: 20px;
+  padding-bottom: 40px;
+}
+
+    
     button {
       background-color: #b58900;
       color: white;
@@ -184,27 +191,29 @@
 
   <form>
     <div class="form-group">
+
       <label for="name">Ім'я</label>
       <input type="text" id="name" name="name">
-    </div>
+    
 
-    <div class="form-group">
+    
       <label for="phone">Телефон (000-000-00-00)</label>
       <input type="tel" id="phone" name="phone" pattern="\d{3}-\d{3}-\d{2}-\d{2}">
-    </div>
+    
 
-    <div class="form-group">
+   
       <label for="email">Email</label>
       <input type="email" id="email" name="email">
-    </div>
-
-    <div class="form-group">
+    
+    
       <label for="date">Дата відвідування</label>
       <input type="date" id="date" name="date">
+
     </div>
 
 
     <div class="form-group">
+
       <label for="age">Вік</label>
       <select id="age" name="age">
         <option value="">Оберіть</option>
@@ -213,9 +222,9 @@
         <option>36-50</option>
         <option>50+</option>
       </select>
-    </div>
+ 
 
-    <div class="form-group">
+    
       <label for="cuisine">Улюблена кухня</label>
       <select id="cuisine" name="cuisine">
         <option>Українська</option>
@@ -223,11 +232,13 @@
         <option>Азійська</option>
         <option>Мексиканська</option>
       </select>
-    </div>
 
-    <div class="form-group">
+  
+
+    
       <label for="dishes">Які ще страви ви б хотіли бачити в меню?</label>
       <textarea id="dishes" name="dishes" rows="3"></textarea>
+
     </div>
 
     <div class="checkbox-group">
@@ -236,9 +247,9 @@
       <label><input type="checkbox" name="reason" value="ad"> Побачив рекламу</label>
       <label><input type="checkbox" name="reason" value="friends"> Порадили друзі</label>
       <label><input type="checkbox" name="reason" value="quality"> Найкраще співвідношення ціни якості</label>
-    </div>
+    
 
-    <div class="radio-group">
+   
       <label>Чи будете ви рекомендувати наш заклад своїм знайомим?</label>
       <label><input type="radio" name="recommend" value="yes"> Так</label>
       <label><input type="radio" name="recommend" value="no"> Ні</label>
